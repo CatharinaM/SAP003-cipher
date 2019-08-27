@@ -1,0 +1,48 @@
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+  }
+
+  figure {
+    float: center;
+    text-align: center;
+  }
+
+.my-class1{
+    width: 610px;
+    margin: 0 auto;
+    background-color: #C56206;
+    padding: 10px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+/* .my-class1:hover {
+  background-color: darkgray;
+} */
+
+.my-classEnv1{
+    text-align: center;
+}
+
+.my-class2{
+    width: 610px;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 10px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+.my-classEnv2{
+    text-align: center;
+}
+
+html {
+    background-color: #BFAA3F;
+  }
