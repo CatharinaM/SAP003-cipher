@@ -53,7 +53,7 @@ describe("cipher", () => {
     });
 
     it("should return ABCDEFGHIJKLMNOPQRSTUVWXYZ for HIJKLMNOPQRSTUVWXYZABCDEFG with offset 33", () => {
-      assert.equal(cipher.decode(33, "HIJKLMNOPQRSTUVWXYZABCDEFG"), "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+      assert.equal(cipher.decode("HIJKLMNOPQRSTUVWXYZABCDEFG", 33), "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     });
 
     //
