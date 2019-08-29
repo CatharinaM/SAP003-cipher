@@ -22,7 +22,7 @@ function encode(Mensagem1, Chave) {
      printar +=  String.fromCharCode(cifrarmin);
 }
   if (alterar >= 32 && alterar <= 64) {
-     cifraresp = ((alterar - 34 + Chave)%26) + 34;
+     cifraresp = ((alterar - 32 + Chave)%26) + 32;
      printar +=  String.fromCharCode(cifraresp);
 }
   }
@@ -32,16 +32,26 @@ function encode(Mensagem1, Chave) {
 
 function decode(Mensagem2, Chave) {
   let printar2="";
+  let alterar2="";
   let cifrar2="";
+  let cifrarmin2="";
+  let cifraresp2="";
   for (let i=0; i < Mensagem2.length; i++) {
-    let alterar2 = Mensagem2[i].charCodeAt();
-    let cifrar2 = ((alterar2 - 90 - Chave)%26) + 90;
-    printar2 += String.fromCharCode(cifrar2);
+    alterar2 = Mensagem2[i].charCodeAt();
+
+    if (alterar2 >= 65 && alterar2 <= 90) {
+      cifrar2 = ((alterar2 - 90 - Chave)%26) + 90;
+      printar2 +=  String.fromCharCode(cifrar2); 
+   } 
+ 
+   if (alterar2 >= 97 && alterar2 <= 122) {
+      cifrarmin2 = ((alterar2 - 122 - Chave)%26) + 122;
+      printar2 +=  String.fromCharCode(cifrarmin2);
+ }
+   if (alterar2 >= 32 && alterar2 <= 64) {
+      cifraresp2 = ((alterar2 - 32 + Chave)%26) + 32;
+      printar2 +=  String.fromCharCode(cifraresp2);
+ }
   } 
   return printar2;
 }
-
-// if(cifrar = ((alterar - 122 - Chave)%26) + 122){
-//  printar = printar + String.fromCharCode(cifrar);
-//   }
-//   return printar2;
