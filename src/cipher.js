@@ -5,19 +5,34 @@ window.cipher = {
 
 function encode(Mensagem1, Chave) {
   let printar="";
+  let alterar="";
+  let cifrar="";
+  let cifrarmin="";
+  let cifraresp="";
   for (let i=0; i < Mensagem1.length; i++) {
-    let alterar = Mensagem1[i].charCodeAt();
-    let cifrar = ((alterar - 65 + Chave)%26) + 65;
-    printar = printar + String.fromCharCode(cifrar);
+    alterar = Mensagem1[i].charCodeAt();
+  
+  if (alterar >= 65 && alterar <= 90) {
+     cifrar = ((alterar - 65 + Chave)%26) + 65;
+     printar +=  String.fromCharCode(cifrar); 
   } 
+
+  if (alterar >= 97 && alterar <= 122) {
+     cifrarmin = ((alterar - 97 + Chave)%26) + 97;
+     printar +=  String.fromCharCode(cifrarmin);
+}
+  if (alterar >= 32 && alterar <= 64) {
+     cifraresp = ((alterar - 34 + Chave)%26) + 34;
+     printar +=  String.fromCharCode(cifraresp);
+}
+  }
   return printar;
 }
 
-// if(cifrar = ((alterar - 97 + Chave)%26) + 97){
-//   document.getElementById ("resultEnviar1").textContent = printar;
-//    }
+
 function decode(Mensagem2, Chave) {
   let printar2="";
+  let cifrar2="";
   for (let i=0; i < Mensagem2.length; i++) {
     let alterar2 = Mensagem2[i].charCodeAt();
     let cifrar2 = ((alterar2 - 90 - Chave)%26) + 90;
@@ -27,5 +42,6 @@ function decode(Mensagem2, Chave) {
 }
 
 // if(cifrar = ((alterar - 122 - Chave)%26) + 122){
-//   document.getElementById ("resultEnviar2").textContent = "";
-//    }
+//  printar = printar + String.fromCharCode(cifrar);
+//   }
+//   return printar2;
