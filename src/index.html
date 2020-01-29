@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Cat e Dog</h1>
-      <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
-      <h2>Deco e Code</h2>
-      <link href="https://fonts.googleapis.com/css?family=Concert+One|Indie+Flower&display=swap" rel="stylesheet">
 
-      <form>
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <figure>
-              <p><img src= "caoegato.png"
-                width="250" height="210">
-            </figure>
+<body>
+  <div id="root">
+    <h1>Cat e Dog</h1>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <h2>Deco e Code</h2>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Indie+Flower&display=swap" rel="stylesheet">
 
-        <div class="my-class1">
-          <label>Mensagem para codificar:</label>
-          <input type="text" placeholder="Digite sua mensagem" id="msgc" /> 
-        
-          <label>Chave:</label>
-          <input type="number" placeholder="Digite sua chave" id="chaveoffset"/> 
-      
-          <input type="button" value="Enviar" id="click1" />
-         </div>
-         
-         <div class="my-classEnv1">
-           <p id="resultEnviar1"> </p>
-         </div>
- 
-         <div class="my-class2">
-           <label>Mensagem para decodificar:</label>  
-           <input type="text" placeholder="Digite sua mensagem" id="msgd"/> 
+    <form>
 
-           <label>Chave:</label>
-           <input type="number" placeholder="Digite sua chave" id="chaveoffset"/> 
-         
-           <input type="button" value="Enviar" id="click2" >
-         </div> 
+      <figure>
+        <img src="./img/caoegato.png" width="250" height="210">
+      </figure>
+
+      <div class="box-msg-encode">
+        <label>Mensagem para codificar:</label>
+        <input type="text" placeholder="Digite sua mensagem" id="msg-encode" />
+
+        <label>Chave:</label>
+        <input type="number" placeholder="Digite sua chave" id="chaveoffset" />
+
+        <input type="button" value="Enviar" id="click1" />
+      </div>
+
+      <div class="send-encode">
+        <p id="result-send-encode"> </p>
+      </div>
+
+      <div class="box-msg-decode">
+        <label>Mensagem para decodificar:</label>
+        <input type="text" placeholder="Digite sua mensagem" id="msg-decode" />
+
+        <label>Chave:</label>
+        <input type="number" placeholder="Digite sua chave" id="chaveoffset" />
+
+        <input type="button" value="Enviar" id="click2">
+      </div>
 
 
-         <div class="my-classEnv2">
-           <p id="resultEnviar2"> </p>
-         </div>
-           
-       </form>
-    </div>
+      <div class="send-decode">
+        <p id="result-send-decode"> </p>
+      </div>
 
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+    </form>
+  </div>
+
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

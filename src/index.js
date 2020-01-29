@@ -1,17 +1,17 @@
-document.getElementById("click1").addEventListener("click", Enviar1);
-function Enviar1() {
-  let Mensagem1 = document.getElementById("msgc").value;
-  let Chave = Number(document.getElementById("chaveoffset").value);
-  let resultEnviar1 = window.cipher.encode(Mensagem1, Chave);
+document.getElementById("click1").addEventListener("click",sendEncode);
+function sendEncode() {
+  let messageEncode = document.getElementById("msg-encode").value;
+  let key = Number(document.getElementById("chaveoffset").value);
+  let resultEncode = window.cipher.encode(messageEncode, key);
 
-  document.getElementById("resultEnviar1").innerHTML += resultEnviar1;
+  document.getElementById("result-send-encode").innerHTML += resultEncode;
 }
 
-document.getElementById("click2").addEventListener("click", Enviar2);
-function Enviar2() {
-  let Mensagem2 = document.getElementById("msgd").value;
-  let Chave = Number(document.getElementById("chaveoffset").value);
-  let resultEnviar2 = window.cipher.decode(Mensagem2, Chave);
+document.getElementById("click2").addEventListener("click", sendDecode);
+function sendDecode() {
+  let messageDecode = document.getElementById("msg-decode").value;
+  let key = Number(document.getElementById("chaveoffset").value);
+  let resultDecode = window.cipher.decode(messageDecode, key);
 
-  document.getElementById("resultEnviar2").innerHTML += resultEnviar2;
+  document.getElementById("result-send-decode").innerHTML += resultDecode;
 }

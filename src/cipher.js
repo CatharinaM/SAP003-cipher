@@ -3,38 +3,38 @@ window.cipher = {
   decode: decode
 };
 
-function encode(Mensagem1, Chave) {
-  let printar="";
-  for (let i=0; i < Mensagem1.length; i++) {
-    let alterar = Mensagem1[i].charCodeAt();
-    if (alterar >= 65 && alterar <= 90) {
-      let cifrar = ((alterar - 65 + Chave)%26) + 65;
-      printar += String.fromCharCode(cifrar); 
-    } else if (alterar >= 97 && alterar <= 122) {
-      let cifrarmin = ((alterar - 97 + Chave)%26) + 97;
-      printar += String.fromCharCode(cifrarmin);
+function encode(messageEncode, key) {
+  let printEncode="";
+  for (let i=0; i < messageEncode.length; i++) {
+    let changeEnc = messageEncode[i].charCodeAt();
+    if (changeEnc >= 65 && changeEnc <= 90) {
+      let cipherEcondeUppercase = ((changeEnc - 65 + key)%26) + 65;
+      printEncode += String.fromCharCode(cipherEcondeUppercase); 
+    } else if (changeEnc >= 97 && changeEnc <= 122) {
+      let cipherEncodelowercase = ((changeEnc - 97 + key)%26) + 97;
+      printEncode += String.fromCharCode(cipherEncodelowercase );
     } else {
-      let cifraresp = ((alterar - 32 + Chave)%33) + 32;
-      printar += String.fromCharCode(cifraresp);
+      let resultCipherEncode = ((changeEnc - 32 + key)%33) + 32;
+      printEncode += String.fromCharCode(resultCipherEncode);
     }
   }
-  return printar;
+  return printEncode;
 }
 
-function decode(Mensagem2, Chave) {
-  let printar2="";
-  for (let i=0; i < Mensagem2.length; i++) {
-    let alterar2 = Mensagem2[i].charCodeAt();
-    if (alterar2 >= 65 && alterar2 <= 90) {
-      let cifrar2 = ((alterar2 - 90 - Chave)%26) + 90;
-      printar2 += String.fromCharCode(cifrar2); 
-    } else if (alterar2 >= 97 && alterar2 <= 122) {
-      let cifrarmin2 = ((alterar2 - 122 - Chave)%26) + 122;
-      printar2 += String.fromCharCode(cifrarmin2);
+function decode(messageDecode, key) {
+  let printDecode="";
+  for (let i=0; i < messageDecode.length; i++) {
+    let changeDec = messageDecode[i].charCodeAt();
+    if (changeDec >= 65 && changeDec <= 90) {
+      let cipherDecodeUppercase = ((changeDec - 90 - key)%26) + 90;
+      printDecode += String.fromCharCode(cipherDecodeUppercase); 
+    } else if (changeDec >= 97 && changeDec <= 122) {
+      let cipherDecodelowercase = ((changeDec - 122 - key)%26) + 122;
+      printDecode += String.fromCharCode(cipherDecodelowercase);
     } else {
-      let cifraresp2 = ((alterar2 - 64 - Chave)%33) + 64;
-      printar2 += String.fromCharCode(cifraresp2);
+      let resultCipherDecode = ((changeDec - 64 - key)%33) + 64;
+      printDec += String.fromCharCode(resultCipherDecode);
     }
   } 
-  return printar2;
+  return printDecode;
 }

@@ -27,7 +27,7 @@ h1 {
     text-align: center;
   }
 
-.my-class1 {
+.box-msg-encode {
     width: 610px;
     margin: 0 auto;
     background-color: #C56206;
@@ -35,15 +35,15 @@ h1 {
     border: 5px solid black;
   }
 
-.my-class1:hover {
+.box-msg-encode:hover {
   background-color: darkgray;
   }
 
-.my-classEnv1 {
+.send-encode {
     text-align: center;
   }
 
-.my-class2 {
+.box-msg-decode {
     width: 610px;
     margin: 0 auto;
     background-color: #FF9500;
@@ -51,11 +51,11 @@ h1 {
     border: 5px solid black;
   }
 
-.my-class2:hover {
+.box-msg-decode:hover {
   background-color: darkgray;
   }
 
-.my-classEnv2 {
+.send-decode {
     text-align: center;
   }
 
