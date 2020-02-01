@@ -1,12 +1,12 @@
 window.cipher = {
-  encode: encode,
-  decode: decode
+  encode,
+  decode
 };
 
 function encode(messageEncode, key) {
   let printEncode="";
   for (let i in messageEncode) {
-    let changeEnc = messageEncode[i].charCodeAt();
+    const changeEnc = messageEncode[i].charCodeAt();
     if (changeEnc >= 65 && changeEnc <= 90) {
       let cipherEcondeUppercase = ((changeEnc - 65 + key)%26) + 65;
       printEncode += String.fromCharCode(cipherEcondeUppercase); 
@@ -23,7 +23,7 @@ function encode(messageEncode, key) {
 function decode(messageDecode, key) {
   let printDecode="";
   for (let i in messageDecode) {
-    let changeDec = messageDecode[i].charCodeAt();
+    const changeDec = messageDecode[i].charCodeAt();
     if (changeDec >= 65 && changeDec <= 90) {
       let cipherDecodeUppercase = ((changeDec - 90 - key)%26) + 90;
       printDecode += String.fromCharCode(cipherDecodeUppercase); 
