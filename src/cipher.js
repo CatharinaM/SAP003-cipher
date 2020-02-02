@@ -11,8 +11,8 @@ function encode(messageEncode, key) {
       let cipherEcondeUppercase = ((changeEnc - 65 + key)%26) + 65;
       printEncode += String.fromCharCode(cipherEcondeUppercase); 
     } else if (changeEnc >= 97 && changeEnc <= 122) {
-      let cipherEncodelowercase = ((changeEnc - 97 + key)%26) + 97;
-      printEncode += String.fromCharCode(cipherEncodelowercase );
+      let cipherEncodeLowercase = ((changeEnc - 97 + key)%26) + 97;
+      printEncode += String.fromCharCode(cipherEncodeLowercase );
     } else {
       printEncode += messageEncode[i];
     }
@@ -28,8 +28,8 @@ function decode(messageDecode, key) {
       let cipherDecodeUppercase = ((changeDec - 90 - key)%26) + 90;
       printDecode += String.fromCharCode(cipherDecodeUppercase); 
     } else if (changeDec >= 97 && changeDec <= 122) {
-      let cipherDecodelowercase = ((changeDec - 122 - key)%26) + 122;
-      printDecode += String.fromCharCode(cipherDecodelowercase);
+      let cipherDecodeLowercase = ((changeDec - 122 - key)%26) + 122;
+      printDecode += String.fromCharCode(cipherDecodeLowercase);
     } else {
       printDecode += messageDecode[i];
     }
